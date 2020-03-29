@@ -1,0 +1,34 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Tutorial app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jordan237prog/CRUD_nodeVueMsql.git"
+  },
+  "keywords": [
+    "node js",
+    "express",
+    "rest",
+    "api",
+    "mysql"
+  ],
+  "author": "JORDAN MOYO",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jordan237prog/CRUD_nodeVueMsql/issues"
+  },
+  "homepage": "https://github.com/jordan237prog/CRUD_nodeVueMsql#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^3.22.0",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.5"
+  }
+}
