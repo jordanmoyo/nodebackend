@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const helmet = require("helmet");
 const path = require("path");
+// const serveStatic = require("serve-static");
 
 //connection to the database
 const db = require("./app/models");
