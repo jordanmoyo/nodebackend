@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const helmet = require("helmet");
+const path = require("path");
 
 //connection to the database
 const db = require("./app/models");
@@ -14,7 +15,7 @@ const app = express();
 
 
 var corsOptions = {
-    origin: 'http://localhost:8080'
+    origin: "https://tutorial-demo/client/public/build/.herokuapp.com" || 'http://localhost:8080'
 };
 
 app.use(cors(corsOptions));
@@ -37,6 +38,17 @@ require("./app/routes/tutorial.routes")(app);
 
 //Lets set a port number for the app to listern on
 const PORT = process.env.PORT || 3000;
+
+
+if( process.env.NODE_ENV === "production" ){
+    app.use(express.static('client/dist'));
+
+    app.get('*', (req, res) =>{
+        res.sendFile(path.join(__dirname, 'client','dist','index.html')); 
+    });
+}
+
+
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}.`);
 });
