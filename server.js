@@ -6,7 +6,7 @@ const path = require("path");
 
 //connection to the database
 const db = require("./app/models");
- db.sequelize.sync({ force: true })
+db.sequelize.sync({ force: true })
 // .then(() => {
 //     console.log("Drop and re-sync db.");
 // });
@@ -15,7 +15,7 @@ const app = express();
 
 
 var corsOptions = {
-    origin: "https://tutorial-demo/client/public/build/.herokuapp.com" || 'http://localhost:8080'
+    origin: 'http://localhost:8080'
 };
 
 app.use(cors(corsOptions));
