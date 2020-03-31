@@ -16,7 +16,7 @@ const app = express();
 
 
 var corsOptions = {
-    origin: 'http://localhost:8080'
+    origin:"https://vue-frontend-tutorial.herokuapp.com" || 'http://localhost:8080'
 };
 
 app.use(cors(corsOptions));
